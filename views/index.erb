@@ -1,0 +1,17 @@
+<form method="post" action="/logout">
+  <input type="submit" value="ログアウト" />
+</form>
+<a href="/user">ユーザ追加</a>
+<h2>出席一覧</h2>
+<form method="get" action="/">
+  <input type="date" name="date" value=<%= "\"#{@date}\"" %> />
+  <input type="submit" value="検索"/>
+</form>
+<table border="1" width="200px">
+  <% @attends.each do |a| %>
+    <tr>
+      <td><%= a['sid'] %></td>
+      <td><%= a['lname'] %></td>
+    </tr>
+  <% end %>
+</table>

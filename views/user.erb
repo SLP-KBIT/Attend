@@ -1,0 +1,39 @@
+<h2>ユーザ登録</h2>
+
+<% if @alert  %>
+  <div class="alert alert-danger"><%= @alert %></div>
+<% end %>
+<form method="post" action="/user" class="form-horizontal">
+  <label for="account" class="col-sm-2 control-label">アカウント(poulenc)</label>
+  <div class="col-sm-6">
+    <input type="text" name="account" class="form-control" />
+  </div>
+  <br /><br />
+  <label for="lname" class="col-sm-2 control-label">姓</label>
+  <div class="col-sm-6">
+    <input type="text" name="lname" class="form-control" />
+  </div>
+  <br /><br />
+  <label for="fname" class="col-sm-2 control-label">名</label>
+  <div class="col-sm-6">
+    <input type="text" name="fname" class="form-control" />
+  </div>
+  <br /><br />
+  <label for="sid" class="col-sm-2 control-label">学籍番号</label>
+  <div class="col-sm-6">
+    <input type="text" name="sid" class="form-control" placeholder="s00t200" />
+  </div>
+  <br /><br />
+  <label for="password" class="col-sm-2 control-label">パスワード</label>
+  <div class="col-sm-6">
+    <input type="password" name="password" class="form-control" />
+  </div>
+  <br /><br />
+  <label for="password_confirmation" class="col-sm-2 control-label">パスワード(確認)</label>
+  <div class="col-sm-6">
+    <input type="password" name="password_confirmation" class="form-control" />
+  </div>
+  <br /><br /><br />
+  <div class="col-md-offset-7">
+  <button type="submit" class="btn btn-primary">登録</button>
+</form>

@@ -1,0 +1,23 @@
+<h3>パスワードリセット</h3>
+<% if @alert  %>
+  <div class="alert alert-warning"><%= @alert %></div>
+<% else %>
+  <div class="alert"></div>
+<% end %>
+<form  action="/edit" method="post">
+  <div class="form-group">
+    <label for="sid">学籍番号(s付き)</label>
+    <input type="text" class="form-control" name="sid" placeholder="s00t000" />
+  </div>
+  <div class="form-group">
+    <label for="pass">パスワード</label>
+    <input type="password" class="form-control" name="pass" />
+  </div>
+  <div class="form-group">
+    <label for="pass_conf">パスワード(確認)</label>
+    <input type="password" class="form-control" name="pass_conf" />
+  </div>
+  <button type="submit" class="btn btn-primary">変更</button>
+  <br /><br /><br />
+  <a class="btn btn-success" href="/user">ユーザ登録</a>
+</form>
